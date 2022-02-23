@@ -6,12 +6,12 @@ import com.linxx.springcloud.entity.Payment;
 import com.linxx.springcloud.service.PaymentService;
 import com.linxx.springcloud.service.PaymentService1;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import java.util.List;
+
+import static java.lang.Thread.sleep;
 
 /**
  * @Auther: @小脑斧不可爱
@@ -20,7 +20,7 @@ import java.util.List;
  * @Project_name: cloudLearn
  */
 @RestController
-@RequestMapping("payment")
+@RequestMapping("/payment")
 public class PaymentController {
 
     @Resource
@@ -33,16 +33,27 @@ public class PaymentController {
     private String serverPort;
 
 
-    @GetMapping("/queryById")
-    public CommonResult<Payment> queryById(Long id){
+    @PostMapping("/queryById/{id}")
+    public CommonResult<Payment> queryById(@RequestParam("id") Long id){
         System.out.println("success! from " + serverPort);
         return ResultUtils.success(paymentService1.queryById(id));
     }
 
-    @GetMapping("/queryAll")
+    @PostMapping("/queryAll")
     public CommonResult<List<Payment>> queryAll(Payment payment){
         System.out.println("success! from " + serverPort);
         return ResultUtils.success(paymentService1.queryAll(null));
+    }
+
+    @PostMapping("/feign/timeout")
+    public CommonResult<String> timeout(){
+        try {
+            sleep(5000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        System.out.println("success! from " + serverPort);
+        return ResultUtils.success("success");
     }
 
 }

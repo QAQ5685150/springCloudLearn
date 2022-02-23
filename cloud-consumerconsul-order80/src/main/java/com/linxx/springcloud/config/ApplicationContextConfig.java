@@ -1,4 +1,4 @@
-package com.linxx.cloud.config;
+package com.linxx.springcloud.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

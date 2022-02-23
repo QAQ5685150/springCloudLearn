@@ -1,4 +1,4 @@
-package com.linxx.cloud.controller;
+package com.linxx.springcloud.controller;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,7 +19,7 @@ import javax.annotation.Resource;
 @RequestMapping("order")
 public class OrderController {
 
-    final private String INVOKE_URL="http://cloud-provider-payment";
+    final private String INVOKE_URL="http://172.16.100.200:8500";
 
     @Resource
     private RestTemplate restTemplate;
