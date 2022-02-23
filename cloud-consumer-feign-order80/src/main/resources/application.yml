@@ -8,9 +8,9 @@ eureka:
     register-with-eureka: false
     fetch-registry: true
 #设置feign客户端超时时间
-#ribbon:
-#  ReadTimeout: 5000
-#  ConnectTimeout: 5000
-#logging:
-#  level:
-#    com.atguigu.springcloud.service.PaymentFeignService: debug
+ribbon:
+  ReadTimeout: 5000
+  ConnectTimeout: 5000
+logging:
+  level:
+    com.atguigu.springcloud.service.PaymentFeignService: debug
