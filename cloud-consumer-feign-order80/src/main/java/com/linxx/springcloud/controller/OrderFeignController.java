@@ -3,6 +3,7 @@ package com.linxx.springcloud.controller;
 import com.linxx.springcloud.entity.CommonResult;
 import com.linxx.springcloud.entity.Payment;
 import com.linxx.springcloud.service.OrderFeignService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -13,6 +14,7 @@ import javax.annotation.Resource;
  * 姓名: @author南风
  * 日期: 2022-02-23 15:34
  **/
+@Slf4j
 @RestController
 @RequestMapping("order")
 public class OrderFeignController {
@@ -22,7 +24,14 @@ public class OrderFeignController {
 
     @GetMapping("/selectOne/{id}")
     public CommonResult<Payment> selectOne(@PathVariable("id") Long id){
-        return orderFeignService.selectOne(id);
+        CommonResult<Payment> paymentCommonResult = null;
+        try {
+            paymentCommonResult = orderFeignService.selectOne(id);
+        } catch (Exception e) {
+            log.info(e.getMessage());
+            paymentCommonResult = new CommonResult<>(404,"not fond!");
+        }
+        return paymentCommonResult;
     }
 
     @GetMapping("/feign/timeout")
