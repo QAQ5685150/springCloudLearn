@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Configuration;
 
 /**
  * 类名: myRules
- * 描述: TODO
+ * 描述: 自定义负载均衡算法规则
  * 姓名: @author南风
  * 日期: 2022-02-23 14:56
  **/

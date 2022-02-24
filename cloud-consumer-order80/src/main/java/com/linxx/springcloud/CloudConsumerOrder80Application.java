@@ -9,7 +9,7 @@ import org.springframework.cloud.netflix.ribbon.RibbonClient;
 /**
  * @Auther: @小脑斧不可爱
  * @Time: 2022-02-11 22:41
- * @Description: TODO
+ * @Description: 订单80消费端启动类
  * @Project_name: cloudLearn
  */
 @SpringBootApplication

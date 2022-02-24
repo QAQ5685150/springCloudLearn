@@ -9,7 +9,7 @@ import java.io.Serializable;
 /**
  * @Auther: @小脑斧不可爱
  * @Time: 2022-02-11 21:32
- * @Description: TODO
+ * @Description: 订单属性
  * @Project_name: cloudLearn
  */
 @Data

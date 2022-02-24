@@ -6,7 +6,7 @@ import com.linxx.springcloud.entity.CommonResult;
 /**
  * @Auther: @小脑斧不可爱
  * @Time: 2022-02-11 22:05
- * @Description: TODO
+ * @Description: 统一返回请求体工具
  * @Project_name: cloudLearn
  */
 public class ResultUtils {

@@ -16,7 +16,7 @@ import static java.lang.Thread.sleep;
 /**
  * @Auther: @小脑斧不可爱
  * @Time: 2022-02-11 21:28
- * @Description: TODO
+ * @Description: 支付控制类8002
  * @Project_name: cloudLearn
  */
 @RestController

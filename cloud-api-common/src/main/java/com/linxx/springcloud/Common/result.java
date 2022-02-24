@@ -3,7 +3,7 @@ package com.linxx.springcloud.Common;
 /**
  * @Auther: @小脑斧不可爱
  * @Time: 2022-02-11 22:07
- * @Description: TODO
+ * @Description: common result
  * @Project_name: cloudLearn
  */
 public interface result {

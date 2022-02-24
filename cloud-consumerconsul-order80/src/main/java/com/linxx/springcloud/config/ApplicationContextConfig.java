@@ -6,7 +6,7 @@ import org.springframework.web.client.RestTemplate;
 
 /**
  * 类名: ApplicationConfig
- * 描述: TODO
+ * 描述: restTemplate 配置类
  * 姓名: @author南风
  * 日期: 2022-02-23 14:16
  **/

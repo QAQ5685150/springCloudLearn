@@ -7,7 +7,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 
 /**
  * 类名: CloudConsumerOrderFeign80Application
- * 描述: TODO
+ * 描述: feign订单80消费端启动类
  * 姓名: @author南风
  * 日期: 2022-02-23 15:19
  **/

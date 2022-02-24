@@ -7,7 +7,7 @@ import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 /**
  * @Auther: @小脑斧不可爱
  * @Time: 2022-02-12 17:20
- * @Description: TODO
+ * @Description: eureka 服务端 7002
  * @Project_name: cloudLearn
  */
 @SpringBootApplication

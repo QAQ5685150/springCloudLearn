@@ -8,7 +8,7 @@ import org.springframework.web.client.RestTemplate;
 /**
  * @Auther: @小脑斧不可爱
  * @Time: 2022-02-12 19:01
- * @Description: TODO
+ * @Description: restTemplate 配置类
  * @Project_name: cloudLearn
  */
 @Configuration

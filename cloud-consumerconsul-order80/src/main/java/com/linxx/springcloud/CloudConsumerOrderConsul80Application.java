@@ -6,7 +6,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 /**
  * 类名: CloudConsumerOrderConsul80Application
- * 描述: TODO
+ * 描述: 订单80consul消费端启动类
  * 姓名: @author南风
  * 日期: 2022-02-23 14:12
  **/

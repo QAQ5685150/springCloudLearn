@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Configuration;
 
 /**
  * 类名: FeignConfig
- * 描述: TODO
+ * 描述: feign 配置类
  * 姓名: @author南风
  * 日期: 2022-02-23 15:21
  **/

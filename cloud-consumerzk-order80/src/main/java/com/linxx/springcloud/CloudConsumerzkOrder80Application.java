@@ -7,7 +7,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 /**
  * @Auther: @小脑斧不可爱
  * @Time: 2022-02-12 19:03
- * @Description: TODO
+ * @Description: 订单80消费端启动类
  * @Project_name: cloudLearn
  */
 @SpringBootApplication
