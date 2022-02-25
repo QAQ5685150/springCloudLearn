@@ -1,8 +1,6 @@
 package com.linxx.springcloud.controller;
 
 import com.linxx.springcloud.service.OrderHystrixService;
-import com.netflix.hystrix.contrib.javanica.annotation.DefaultProperties;
-import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -11,7 +9,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
 
-import static java.lang.Thread.sleep;
 
 /**
  * 类名: OrderController
@@ -22,7 +19,7 @@ import static java.lang.Thread.sleep;
 @Slf4j
 @RestController
 @RequestMapping("order")
-@DefaultProperties(defaultFallback="paymentTimeOutFallbackMethod_Default")
+//@DefaultProperties(defaultFallback="paymentTimeOutFallbackMethod_Default")
 public class OrderController {
 
     @Resource
@@ -33,11 +30,11 @@ public class OrderController {
         return "test";
     }
 
-    @HystrixCommand
+    //@HystrixCommand
     @GetMapping("info/ok/{id}")
     public String paymentInfo_OK(@PathVariable("id") Integer id){
         try {
-            sleep(3000);
+            Thread.sleep(5000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -52,9 +49,9 @@ public class OrderController {
 //            @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "1500")
 //    })
     @GetMapping("info/error/{id}")
-    @HystrixCommand
+    //@HystrixCommand
     public String paymentInfo_ERROR(@PathVariable("id") Integer id){
-        int a = 1/0;
+        //int a = 1/0;
         return orderHystrixService.paymentInfo_TimeOut(id);
     }
 
@@ -75,5 +72,4 @@ public class OrderController {
         return "80____paymentInfo_ERROR_Handler___异常返回，接口调用方自动保护开启";
     }
 
-    //todo 服务熔断
 }
