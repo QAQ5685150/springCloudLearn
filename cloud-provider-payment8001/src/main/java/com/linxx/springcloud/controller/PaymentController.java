@@ -40,19 +40,19 @@ public class PaymentController {
     @Resource
     private DiscoveryClient discoveryClient;
 
-    @PostMapping("/queryById/{id}")
+    @GetMapping("/queryById/{id}")
     public CommonResult<Payment> queryById(@RequestParam("id") Long id){
         System.out.println("success! from " + serverPort);
         return ResultUtils.success(paymentService1.queryById(id));
     }
 
-    @PostMapping("/queryAll")
+    @GetMapping("/queryAll")
     public CommonResult<List<Payment>> queryAll(Payment payment){
         System.out.println("success! from " + serverPort);
         return ResultUtils.success(paymentService1.queryAll(null));
     }
 
-    @PostMapping("/feign/timeout")
+    @GetMapping("/feign/timeout")
     public CommonResult<String> timeout(){
         try {
             sleep(5000);

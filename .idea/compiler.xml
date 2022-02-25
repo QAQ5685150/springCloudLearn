@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="cloud-provider-payment8003" />
+        <module name="cloud-comsumer-hystrix-dashboard9001" />
         <module name="cloud-provider-payment8002" />
         <module name="cloud-api-common" />
         <module name="cloud-eureka-server7001" />
