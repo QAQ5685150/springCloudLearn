@@ -16,4 +16,20 @@ spring:
           search-paths:
             - springcloud-config
           default-label: main
+  rabbitmq:
+    host: 192.168.111.128
+    port: 5672
+    username: guest
+    password: guest
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    bus-env:
+      enabled: true
+      bus-refresh:
+        enabled: true
 
