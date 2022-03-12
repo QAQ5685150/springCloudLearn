@@ -41,9 +41,14 @@ public class PaymentController {
     private DiscoveryClient discoveryClient;
 
     @GetMapping("/queryById/{id}")
-    public CommonResult<Payment> queryById(@RequestParam("id") Long id){
+    public CommonResult<Payment> queryById(@PathVariable("id") Long id){
         System.out.println("success! from " + serverPort);
         return ResultUtils.success(paymentService1.queryById(id));
+    }
+
+    @GetMapping("lb")
+    public CommonResult<String> getPaymentLB(){
+        return ResultUtils.success(serverPort);
     }
 
     @GetMapping("/queryAll")
