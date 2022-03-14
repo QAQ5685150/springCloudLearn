@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="cloud-provider-payment8003" />
         <module name="cloud-comsumer-hystrix-dashboard9001" />
+        <module name="cloudalibaba-config-nacos-client3377" />
         <module name="cloud-provider-payment8002" />
         <module name="cloud-api-common" />
         <module name="cloud-eureka-server7001" />
@@ -21,14 +22,27 @@
         <module name="cloud-providerconsul-payment8004" />
         <module name="cloud-consumerconsul-order80" />
         <module name="cloud-stream-rabbitmq-consumer8802" />
-        <module name="cloud-stream-rabbitmq-consumer8803" />
         <module name="cloud-config-center-3344" />
         <module name="cloud-config-center-3355" />
         <module name="cloud-config-center-3366" />
+        <module name="cloudalibaba-provider-payment9001" />
+        <module name="cloudalibaba-consumer-nacos-order83" />
         <module name="cloud-consumer-order80" />
         <module name="cloud-provider-hystrix-payment8001" />
         <module name="cloud-consumer-feign-order80" />
         <module name="cloud-gateway-gatewaty9527" />
+      </profile>
+      <profile name="Annotation profile for cloudalibaba-provider-payment9002" enabled="true">
+        <sourceOutputDir name="../cloudalibaba-provider-payment9001/target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../cloudalibaba-provider-payment9001/target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="cloudalibaba-provider-payment9002" />
+      </profile>
+      <profile name="Annotation profile for cloud_learn" enabled="true">
+        <sourceOutputDir name="../cloud-stream-rabbitmq-consumer8802/target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../cloud-stream-rabbitmq-consumer8802/target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="cloud-stream-rabbitmq-consumer8803" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8" />
