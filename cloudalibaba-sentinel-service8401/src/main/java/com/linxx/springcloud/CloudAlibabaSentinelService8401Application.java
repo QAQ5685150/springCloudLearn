@@ -6,14 +6,14 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 /**
  * @Auther: @小脑斧不可爱
- * @Time: 2022-03-14 15:43
+ * @Time: 2022-03-15 14:51
  * @Description: TODO
  * @Project_name: cloud_learn
  */
 @SpringBootApplication
 @EnableDiscoveryClient
-public class CloudAlibabaProviderPayment9001Application {
+public class CloudAlibabaSentinelService8401Application {
     public static void main(String[] args) {
-        SpringApplication.run(CloudAlibabaProviderPayment9001Application.class,args);
+        SpringApplication.run(CloudAlibabaSentinelService8401Application.class,args);
     }
 }

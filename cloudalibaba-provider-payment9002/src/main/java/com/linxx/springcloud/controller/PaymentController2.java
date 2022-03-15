@@ -12,12 +12,12 @@ import org.springframework.web.bind.annotation.RestController;
  * @Project_name: cloud_learn
  */
 @RestController
-public class PaymentController {
+public class PaymentController2 {
 
     @Value("${server.port}")
     private String serverPort;
 
-    @GetMapping(value = "/payment/nacos/{id}")
+    @GetMapping(value = "/payment2/nacos/{id}")
     public String getPayment(@PathVariable("id") Integer id) {
         return "nacos registry, serverPort: " + serverPort + "\t id" + id;
     }
